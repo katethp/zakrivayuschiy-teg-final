@@ -1,0 +1,23 @@
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --main-font: "Inter-Variable", sans-serif;
+  --accent-font: "PressStart2P", fantasy;
+  --main-font-weight: 400;
+  --accent-font-weight: 700;
+  --main-color: #000000;
+  --main-bg-color: #ffffff;
+  --bg-image: url(../svg/pattern-light.svg);
+  --card-image: url(../image/image371.png);
+  --title-top-pad: 4px;
+  --title-bottome-pad: 6px;
+  --heart-contour: #000000;
+  --heart-sparks: #ff0000;
+}
+
+@media (375px < width) {
+  :root {
+    --title-top-pad: 7px;
+    --title-bottome-pad: 7px;
+  }
+}

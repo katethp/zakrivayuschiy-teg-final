@@ -1,0 +1,37 @@
+/* В этом файле вы опишете значения переменных в разных цветовых схемах.
+Придерживайтесь такого именования классов:
+✦ theme-dark — класс тёмной темы
+✦ theme-light — класс светлой темы
+✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
+*/
+.page.theme-dark {
+  --main-color: #00cc14;
+  --main-bg-color: #000000;
+  --main-font-weight: 465;
+  --accent-font-weight: 785;
+  --bg-image: url(../svg/pattern-dark.svg);
+  --heart-contour: #00cc14;
+  --heart-sparks: #ff0000;
+}
+
+.page.theme-light {
+  --main-font-weight: 400;
+  --accent-font-weight: 700;
+  --main-color: #000000;
+  --main-bg-color: #ffffff;
+  --bg-image: url(../svg/pattern-light.svg);
+  --heart-contour: #000000;
+  --heart-sparks: #ff0000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color: #00cc14;
+    --main-bg-color: #000000;
+    --main-font-weight: 465;
+    --accent-font-weight: 785;
+    --bg-image: url(../svg/pattern-dark.svg);
+    --heart-contour: #00cc14;
+    --heart-sparks: #ff0000;
+  }
+}
