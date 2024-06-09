@@ -53,7 +53,7 @@
         <div class="card__image-container">
           <span class="card__label">&lt;/HTML&gt;</span>
           <img
-            class="content__card-picture"
+            class="content__card-picture  start-image"
             src="images/image.png"
             alt="изображение стола с небольшим беспорядком из вещей"
           />
@@ -111,7 +111,7 @@
         <div class="card__image-container">
           <span class="card__label">&lt;/HTML&gt;</span>
           <img
-            class="content__card-picture"
+            class="content__card-picture emty-list"
             src="images/sprint_1.png"
             alt="Изображение ноутбука на столе в полураскрытом состоянии"
           />
@@ -172,7 +172,7 @@
         <div class="card__image-container">
           <span class="card__label">&lt;CSS&gt;</span>
           <img
-            class="content__card-picture"
+            class="content__card-picture sprint_1_2"
             src="images/sprint_1_f.png"
             alt="Изображение ноутбука на столе в раскрытом состоянии и виден код"
           />
@@ -230,7 +230,7 @@
         <div class="card__image-container">
           <span class="card__label">&lt;desigions&gt;</span>
           <img
-            class="content__card-picture"
+            class="content__card-picture sprint_2_1"
             src="images/sprint_2.png"
             alt="Изображение ноутбука на столе и фотокамеры"
           />
@@ -291,7 +291,7 @@
         <div class="card__image-container">
           <span class="card__label">&lt;care&gt;</span>
           <img
-            class="content__card-picture"
+            class="content__card-picture sprint_2_2"
             src="images/sprint_2_f.png"
             alt="Изображение ноутбука, наушников и телефона на столе"
           />
@@ -353,7 +353,7 @@
         <div class="card__image-container">
           <span class="card__label">&lt;support&gt;</span>
           <img
-            class="content__card-picture"
+            class="content__card-picture sprint_3_1"
             src="images/sprint_3.png"
             alt="Изображение ноутбука с кодом на экране"
           />
@@ -412,7 +412,7 @@
         <div class="card__image-container">
           <span class="card__label">&lt;lifes-style: none;&gt;</span>
           <img
-            class="content__card-picture"
+            class="content__card-picture sprint_3_2"
             src="images/sprint_3_f.png"
             alt="Изображение ноутбука и ежедневника на белом столе"
           />
@@ -472,7 +472,7 @@
         <div class="card__image-container">
           <span class="card__label">&lt;experience&gt;</span>
           <img
-            class="content__card-picture"
+            class="content__card-picture sprint_4_1"
             src="images/sprint_4.png"
             alt="Изображение ноутбука с кодом на белом столе"
           />
@@ -532,52 +532,56 @@
         </button>
       </div>
       <div class="save">
-        <button type="button" class="save__button button">
+        <button type="button" class="save__button button" id="saveButton">
           <svg viewBox="0 0 28 28" class="floppy">
             <use href="./svg/floppy.svg#floppy"></use>
           </svg>
           <span class="button__text">Сохранить на память</span>
         </button>
       </div>
-      <!-- <dialog id="dialog-id" class="diskette">
-        <form  method="dialog">
-        <ul class="diskette__floppy-text">
-          <li>
-            <svg
-              viewBox="0 0 39 39" class="diskette__floppy">
-              <use href="./svg/floppy.svg#floppy"></use>
+      <dialog id="saveDialog">
+        <p>Content of the modal window</p>
+        <button id="closeDialog">Close</button>
+      </dialog>
+
+    <!-- <dialog id="dialog-id" class="diskette">
+      <form  method="dialog">
+      <ul class="diskette__floppy-text">
+        <li>
+          <svg
+            viewBox="0 0 39 39" class="diskette__floppy">
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
+        </li>
+        <li>
+          <span class="diskette__text"
+            >Вставьте дискету, чтобы продолжить</span
+          >
+        </li>
+      </ul>        
+        <button class="diskette__button">
+              <span class="diskette__text">ОК</span>
+          </button>
+      </form> -->
+     
+      <dialog id="dialog-id">
+        <form class="diskette" method="dialog">
+          <div class="diskette__floppy-text">
+            <svg width="39" height="39" viewBox="0 0 21 21" class="diskette__floppy">
+              <use href="/svg/floppy.svg#floppy"></use>
             </svg>
-          </li>
-          <li>
-            <span class="diskette__text"
-              >Вставьте дискету, чтобы продолжить</span
-            >
-          </li>
-        </ul>        
+            <p class="diskette__text">Вставьте дискету, чтобы продолжить</p>
+          </div>
           <button class="diskette__button">
-                <span class="diskette__text">ОК</span>
-            </button>
-        </form> -->
-       
-        <dialog id="dialog-id">
-          <form class="diskette" method="dialog">
-            <div class="diskette__floppy-text">
-              <svg width="39" height="39" viewBox="0 0 21 21" class="diskette__floppy">
-                <use href="/svg/floppy.svg#floppy"></use>
-              </svg>
-              <p class="diskette__text">Вставьте дискету, чтобы продолжить</p>
-            </div>
-            <button class="diskette__button">
-              <span class="diskette__text">ок</span>
-            </button>
-          </form>
-        </dialog>
+            <span class="diskette__text">ок</span>
+          </button>
+        </form>
+      </dialog>
 
 
 
-      <!-- </dialog> -->
-    </main>
-    <script src="./scripts/set-theme.js"></script>
-    <script src="./scripts/like.js"></script>
-  </body>
-</html>
+    <!-- </dialog> -->
+  </main>
+  <script src="./scripts/set-theme.js"></script>
+  <script src="./scripts/like.js"></script>
+</body>

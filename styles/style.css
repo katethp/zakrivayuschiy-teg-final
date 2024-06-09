@@ -23,13 +23,24 @@
   font-variation-settings: "wght" var(--main-font-weight, 400);
   color: var(--main-color, #000000);
   background-color: var(--main-bg-color, #ffffff);
-  background-image: var(--bg-image);
   background-repeat: repeat;
-  background-size: auto 4px;
-  background-attachment: fixed;
+  background-size: cover;
+  background-image: 
+    var(--light-theme-stripes-horizontal),
+    var(--light-theme-stripes-vertical),
+    var(--light-theme-gradient);
 }
 
-@media (375px < width) {
+[data-theme="dark"] .page {
+  color: var(--main-color, #ffffff);
+  background-color: var(--main-bg-color, #000000);
+  background-image: 
+    var(--dark-theme-stripes-horizontal),
+    var(--dark-theme-stripes-vertical),
+    var(--dark-theme-gradient);
+}
+
+@media (min-width: 375px) {
   .page {
     min-inline-size: 375px;
   }
@@ -219,6 +230,38 @@
     padding-block-start: var(--title-top-pad);
     padding-block-end: var(--title-bottome-pad);
   }
+}
+
+.start-image {
+  filter: brightness(110%);
+}
+
+.emty-list {
+  filter: contrast(120%);
+}
+
+.sprint_1_2 {
+  filter: sepia(100%);
+}
+
+.sprint_2_1 {
+  filter: grayscale(0.8);
+}
+
+.sprint_2_2 {
+  filter: hue-rotate(-30deg);
+}
+
+.sprint_3_1 {
+  filter: invert(100%);
+}
+
+.sprint_3_2 {
+  filter: grayscale(0.8);
+}
+
+.sprint_4_1 {
+  filter: contrast(120%);
 }
 
 .content__card-picture {
@@ -443,11 +486,29 @@
   }
 } 
 
+dialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: none;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+dialog[open] {
+  display: block;
+}
+
 .floppy {
   inline-size: 28px;
   aspect-ratio: 1/1;
   position: relative;
   z-index: 1;
+  color: var(--btn-text-color, #ffffff);
+  mix-blend-mode: difference;
   
 }
 
@@ -524,3 +585,4 @@
   padding-block-start: 10.5px;
   padding-block-end: 10.5px;
 }
+
