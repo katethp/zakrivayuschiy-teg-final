@@ -478,7 +478,6 @@
 
 @media (min-width: 375px) {
   .save__button {
-    /*min-inline-size: 333px;*/
     display: flex;
     flex-direction: row;
     gap: 5px;
@@ -594,6 +593,7 @@
   padding-block-start: 10.5px;
   padding-block-end: 10.5px;
 }
+
 
 
 

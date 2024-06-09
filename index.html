@@ -532,7 +532,12 @@
         </button>
       </div>
       <div class="save">
-        <button type="button" class="save__button button" id="saveButton" aria-controls="dialog-id">
+        <button
+          type="button"
+          class="save__button button"
+          id="saveButton"
+          aria-controls="dialog-id"
+        >
           <svg viewBox="0 0 28 28" class="floppy">
             <use href="svg/floppy.svg"></use>
           </svg>
@@ -541,14 +546,14 @@
       </div>
       
       <dialog id="dialog-id" class="diskette">
-        <form class="diskette" method="dialog">
+        <form class="diskette" id="dialogForm">
           <div class="diskette__floppy-text">
             <svg width="39" height="39" viewBox="0 0 21 21" class="diskette__floppy">
               <use href="svg/floppy.svg"></use>
             </svg>
             <p class="diskette__text">Вставьте дискету, чтобы продолжить</p>
           </div>
-          <button class="diskette__button" id="closeDialogButton">
+          <button type="button" class="diskette__button" id="closeDialogButton">
             <span class="diskette__text">ок</span>
           </button>
         </form>
