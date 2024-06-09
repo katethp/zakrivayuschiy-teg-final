@@ -236,20 +236,24 @@
   filter: brightness(110%);
 }
 
-.emty-list {
+.empty-list {
   filter: contrast(120%);
 }
 
-.sprint_1_2 {
+.sprint_1_1 {
   filter: sepia(100%);
 }
 
+.sprint_1_2 {
+  filter: grayscale(100%);
+}
+
 .sprint_2_1 {
-  filter: grayscale(0.8);
+  filter: hue-rotate(90deg);
 }
 
 .sprint_2_2 {
-  filter: hue-rotate(-30deg);
+  filter: saturate(150%);
 }
 
 .sprint_3_1 {
@@ -257,11 +261,11 @@
 }
 
 .sprint_3_2 {
-  filter: grayscale(0.8);
+  filter: blur(2px);
 }
 
 .sprint_4_1 {
-  filter: contrast(120%);
+  filter: drop-shadow(2px 4px 6px black);
 }
 
 .content__card-picture {
@@ -437,9 +441,6 @@
   }
 }
 
-.emty-list {
-  filter: contrast(120%);
-}
 
 .content__card-image {
   position: relative;
@@ -454,7 +455,7 @@
   margin-inline-end: auto;
 }
 
-@media (375px < width) {
+@media (min-width: 375px) {
   .save {
     min-inline-size: 376px;
     max-inline-size: 700px;
@@ -475,7 +476,7 @@
   padding-inline-end: 17px;
 }
 
-@media (width > 375px) {
+@media (min-width: 375px) {
   .save__button {
     flex-direction: column;
     max-width: 306px;
@@ -509,10 +510,9 @@ dialog[open] {
   z-index: 1;
   color: var(--btn-text-color, #ffffff);
   mix-blend-mode: difference;
-  
 }
 
-@media (375px < width) {
+@media (min-width: 375px) {
   .floppy {
     inline-size: 21px;
     margin-inline-end: 8px;
@@ -528,9 +528,19 @@ dialog[open] {
   background-color: var(--main-bg-color, #ffffff);
   color: var(--main-color, #000000);
   border: 2px solid var(--main-color, #000000);
-  display: grid;
+  display: none;
   position: fixed;
-  inset: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  padding: 30px;
+}
+
+.diskette[open] {
+  display: flex;
 }
 
 .diskette__text {
@@ -543,7 +553,7 @@ dialog[open] {
   text-transform: uppercase;
 }
 
-.diskette[open] .diskette__floppy-text {
+.diskette__floppy-text {
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -552,27 +562,14 @@ dialog[open] {
   padding-block-end: 30px;
 }
 
-.diskette[open] .diskette__floppy {
+.diskette__floppy {
   width: 39px;
   height: 39px;
   color: var(--main-color, #000000);
   display: inline-block;
 }
 
-.diskette[open] {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
-  padding: 30px;
-}
-
-.diskette:not([open]) {
-  pointer-events: none;
-  opacity: 0;
-}
-
-.diskette[open] .diskette__button {
+.diskette__button {
   background-color: var(--main-bg-color, #ffffff);
   color: var(--main-color, #000000);
   min-inline-size: 296px;
@@ -585,4 +582,5 @@ dialog[open] {
   padding-block-start: 10.5px;
   padding-block-end: 10.5px;
 }
+
 

@@ -539,48 +539,20 @@
           <span class="button__text">Сохранить на память</span>
         </button>
       </div>
-      <dialog id="saveDialog">
-        <p>Content of the modal window</p>
-        <button id="closeDialog">Close</button>
-      </dialog>
-
-    <!-- <dialog id="dialog-id" class="diskette">
-      <form  method="dialog">
-      <ul class="diskette__floppy-text">
-        <li>
-          <svg
-            viewBox="0 0 39 39" class="diskette__floppy">
-            <use href="./svg/floppy.svg#floppy"></use>
-          </svg>
-        </li>
-        <li>
-          <span class="diskette__text"
-            >Вставьте дискету, чтобы продолжить</span
-          >
-        </li>
-      </ul>        
-        <button class="diskette__button">
-              <span class="diskette__text">ОК</span>
-          </button>
-      </form> -->
-     
-      <dialog id="dialog-id">
-        <form class="diskette" method="dialog">
+      
+      <dialog id="saveDialog" class="diskette">
+        <form method="dialog">
           <div class="diskette__floppy-text">
             <svg width="39" height="39" viewBox="0 0 21 21" class="diskette__floppy">
-              <use href="/svg/floppy.svg#floppy"></use>
+              <use href="./svg/floppy.svg#floppy"></use>
             </svg>
             <p class="diskette__text">Вставьте дискету, чтобы продолжить</p>
           </div>
-          <button class="diskette__button">
+          <button class="diskette__button" id="closeDialogButton">
             <span class="diskette__text">ок</span>
           </button>
         </form>
       </dialog>
-
-
-
-    <!-- </dialog> -->
   </main>
   <script src="./scripts/set-theme.js"></script>
   <script src="./scripts/like.js"></script>
