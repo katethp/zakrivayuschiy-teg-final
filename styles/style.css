@@ -455,7 +455,7 @@
   margin-inline-end: auto;
 }
 
-@media (min-width: 375px) {
+@media (375px < width) {
   .save {
     min-inline-size: 376px;
     max-inline-size: 700px;
@@ -476,8 +476,9 @@
   padding-inline-end: 17px;
 }
 
-@media (min-width: 375px) {
+@media (width > 375px) {
   .save__button {
+    /*min-inline-size: 333px;*/
     display: flex;
     flex-direction: row;
     gap: 5px;
@@ -499,7 +500,7 @@
   mix-blend-mode: difference;
 }
 
-@media (min-width: 375px) {
+@media (375px < width) {
   .floppy {
     inline-size: 21px;
     margin-inline-end: 8px;
@@ -507,7 +508,7 @@
 }
 
 .diskette::backdrop {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(0 0 0 / 0.8);
 }
 
 .diskette {
@@ -517,12 +518,7 @@
   border: 2px solid var(--main-color, #000000);
   display: grid;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 30px;
-  gap: 30px;
-  align-items: center;
+  inset: 0;
 }
 
 .diskette__text {
@@ -533,22 +529,6 @@
   line-height: 150%;
   font-weight: var(--main-font-weight, 400);
   text-transform: uppercase;
-}
-
-.diskette__floppy-text {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  color: var(--main-color, #000000);
-  padding-block-end: 30px;
-}
-
-.diskette__floppy {
-  width: 39px;
-  height: 39px;
-  color: var(--main-color, #000000);
-  display: inline-block;
 }
 
 .diskette[open] .diskette__floppy-text {
@@ -580,7 +560,7 @@
   opacity: 0;
 }
 
-.diskette__button {
+.diskette[open] .diskette__button {
   background-color: var(--main-bg-color, #ffffff);
   color: var(--main-color, #000000);
   min-inline-size: 296px;
