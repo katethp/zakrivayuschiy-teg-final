@@ -478,29 +478,17 @@
 
 @media (min-width: 375px) {
   .save__button {
-    flex-direction: column;
-    max-width: 306px;
-    width: 100%;
-    max-height: 80px;
-    height: 100%;
-    padding-bottom: 12.5px;
+    /*min-inline-size: 333px;*/
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    padding-block-start: 13px;
+    padding-block-end: 13px;
+    padding-inline-start: 17px;
+    padding-inline-end: 17px;
   }
-} 
-
-dialog {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  border: none;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-dialog[open] {
-  display: block;
 }
 
 .floppy {
@@ -520,7 +508,7 @@ dialog[open] {
 }
 
 .diskette::backdrop {
-  background-color: rgb(0 0 0 / 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .diskette {
@@ -528,19 +516,14 @@ dialog[open] {
   background-color: var(--main-bg-color, #ffffff);
   color: var(--main-color, #000000);
   border: 2px solid var(--main-color, #000000);
-  display: none;
+  display: grid;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  flex-direction: column;
+  padding: 30px;
   gap: 30px;
   align-items: center;
-  padding: 30px;
-}
-
-.diskette[open] {
-  display: flex;
 }
 
 .diskette__text {
@@ -569,6 +552,35 @@ dialog[open] {
   display: inline-block;
 }
 
+.diskette[open] .diskette__floppy-text {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color, #000000);
+  padding-block-end: 30px;
+}
+
+.diskette[open] .diskette__floppy {
+  width: 39px;
+  height: 39px;
+  color: var(--main-color, #000000);
+  display: inline-block;
+}
+
+.diskette[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  padding: 30px;
+}
+
+.diskette:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+}
+
 .diskette__button {
   background-color: var(--main-bg-color, #ffffff);
   color: var(--main-color, #000000);
@@ -582,5 +594,6 @@ dialog[open] {
   padding-block-start: 10.5px;
   padding-block-end: 10.5px;
 }
+
 
 
